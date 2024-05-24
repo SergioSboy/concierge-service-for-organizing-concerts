@@ -1,0 +1,16 @@
+.selected{
+    background-color: #c5c5c5; /* Цвет фона для выбранной кнопки */
+    font-weight: bold; /* Увеличение шрифта для выбранной кнопки */
+    /* Другие стили по вашему желанию */
+}
+.er{
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.btns{
+    display: grid;
+    grid-template-columns: 100px 100px;
+    grid-gap: 10px;
+}

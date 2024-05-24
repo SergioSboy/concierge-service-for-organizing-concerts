@@ -1,0 +1,65 @@
+.merch_card {
+    width: 320px;
+    height: 500px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 16px;
+    transition: box-shadow 0.3s; /* Анимация при изменении тени */
+}
+
+.merch_images {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+.bigImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.bigImage:hover {
+    transform: scale(1.1); /* Увеличиваем масштаб на 10% при наведении */
+    transition: transform 0.5s; /* Добавляем плавный переход */
+}
+
+.merch_details {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+h2 {
+    margin-top: 0;
+}
+
+p {
+    margin-bottom: 8px;
+    font-size: 18px;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    background-color: #fff; /* Белый цвет кнопки по умолчанию */
+    color: black; /* Цвет текста кнопки */
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover {
+    background-color: #007bff; /* Изменяем цвет кнопки при наведении */
+    color: #fff;
+}
+
+/* Тень и изменение цвета при наведении */
+.merch_card:hover {
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Добавляем тень */
+     background-color: #f7f7f7; /* Изменяем цвет фона */
+ }

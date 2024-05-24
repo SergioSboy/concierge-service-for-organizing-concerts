@@ -1,0 +1,77 @@
+.events{
+    margin-bottom: 50px;
+}
+
+.tracks {
+    display: flex;
+    justify-content: center; /* Размещаем содержимое по горизонтали по центру */
+    align-items: center; /* Размещаем содержимое по вертикали по центру */
+    flex-wrap: wrap; /* Разрешаем перенос элементов на новую строку */
+}
+
+.track {
+    position: relative;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.trackContainer {
+    position: relative; /* Позволяет позиционировать иконку внутри контейнера трека */
+    margin: 10px;
+    display: grid;
+    grid-template-rows: 1fr 50px;
+}
+
+.playIcon {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    background: url(https://teesing.com/media/home/play.png) no-repeat center center;
+    background-size: cover;
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Добавить плавные анимации при изменении */
+}
+
+.trackContainer:hover .playIcon {
+    transform: translate(-50%, -50%) scale(1.5); /* Увеличиваем иконку на 1.5 раза */
+    opacity: 1; /* Показываем иконку при наведении */
+}
+
+.playIcon:hover {
+    cursor: pointer; /* Добавляем указатель при наведении на иконку */
+}
+
+.playIcon img {
+    width: 100%; /* Заполнение 100% ширины блока */
+    height: 100%; /* Заполнение 100% высоты блока */
+}
+
+.trackCaption {
+    text-align: center; /* Выравниваем текст по центру */
+    margin-top: 10px; /* Добавляем небольшой отступ сверху */
+    font-size: 16px; /* Размер шрифта */
+    color: #333; /* Цвет текста */
+    font-weight: bold;
+}
+
+.multiline {
+
+    max-width: 250px;
+    white-space: pre-line; /* Разрешает перенос по символам, словам и строкам */
+}
+.fullWidthImage{
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.btn{
+    margin-top: 5px;
+    text-align: center;
+}
+
+
+
+

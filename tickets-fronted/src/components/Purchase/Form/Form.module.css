@@ -1,0 +1,49 @@
+.forma h2{
+    text-align: center;
+}
+.form_container {
+    max-width: 400px;
+    margin: 0 auto;
+
+    padding: 20px 30px 20px 20px; /* Установка одинакового отступа справа и слева */
+    border: 2px solid rgba(0, 0, 0, 0.74);
+    border-radius: 5px;
+
+}
+
+.form_container label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form_container input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form_container button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    margin-left: auto;
+}
+
+.form_container button:hover {
+    background-color: #0056b3;
+}
+
+.error {
+    color: red;
+    font-size: 14px;
+}
+
+.input_error {
+    border: 1px solid red;
+}

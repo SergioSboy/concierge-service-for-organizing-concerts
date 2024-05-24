@@ -1,0 +1,66 @@
+@font-face {
+    font-family: 'Shinners'; /* Имя вашего шрифта */
+    src: url('../common/Fonts/shinners-regular.ttf') format('ttf'),
+    url('../common/Fonts/shinners-regular.ttf') format('woff');
+    /* Дополнительные свойства: weight, style, etc. */
+
+}
+@font-face {
+    font-family: 'Topor'; /* Имя вашего шрифта */
+    src: url('../common/Fonts/Topor-Regular.ttf') format('ttf'), /* формат TTF */
+    url('../common/Fonts/Topor-Regular.ttf') format('woff'); /* формат WOFF */
+    /* Дополнительные свойства: weight, style, etc. */
+}
+
+@font-face {
+    font-family: 'MisterBrush'; /* Имя вашего шрифта */
+    src: url('../common/Fonts/MisterBrush.ttf') format('ttf'), /* формат TTF */
+    url('../common/Fonts/MisterBrush.ttf') format('woff'); /* формат WOFF */
+    /* Дополнительные свойства: weight, style, etc. */
+}
+
+@font-face {
+    font-family: 'Parabola'; /* Имя вашего шрифта */
+    src: url('../common/Fonts/Parabola.ttf') format('ttf'), /* формат TTF */
+    url('../common/Fonts/Parabola.ttf') format('woff'); /* формат WOFF */
+    /* Дополнительные свойства: weight, style, etc. */
+}
+
+.header{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.header img{
+    width: 80px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+
+
+a {
+    color: #808080FF; /* Цвет текста ссылки */
+    text-decoration: none; /* Убирает подчеркивание ссылки */
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline; /* Добавляет подчеркивание при наведении на ссылку */
+}
+
+.link{
+    font-size: 20px;
+    margin: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.name{
+    margin: 10px;
+    text-align: center;
+    font-size: 34px;
+    font-family: 'Shinners', sans-serif;
+}

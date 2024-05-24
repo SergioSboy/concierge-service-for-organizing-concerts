@@ -1,0 +1,22 @@
+.footer {
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    padding: 20px 0; /* Вы можете настроить отступы, как вам нужно */
+    text-align: center; /* Центрируем содержимое по горизонтали */
+}
+
+.footerLinks {
+    margin-bottom: 10px;
+}
+
+.footerLinks a {
+    margin-right: 10px;
+    color: #333;
+    text-decoration: none;
+}
+
+.footerText p {
+    font-size: 14px;
+    color: #666;
+}

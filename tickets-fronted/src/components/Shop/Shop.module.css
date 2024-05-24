@@ -1,0 +1,39 @@
+.cards h1{
+    margin-bottom: 60px;
+}
+.cards{
+    margin-bottom: 250px;
+}
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.category {
+    text-align: center;
+    transition: transform 0.3s ease, color 0.3s ease; /* Анимация при наведении */
+}
+
+.category img {
+    width: 200px;
+    height: 200px;
+
+    object-fit: cover;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease; /* Анимация при наведении */
+}
+
+.category:hover {
+    transform: translateY(-10px); /* Поднять текст при наведении */
+    color: #007bff; /* Изменить цвет текста при наведении */
+}
+
+.category:hover img {
+    transform: scale(1.1); /* Увеличить масштаб изображения при наведении */
+}
+
+.category h3 {
+    font-size: 18px;
+    color: #333;
+}

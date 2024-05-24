@@ -1,0 +1,34 @@
+.parent{
+    display: flex;
+    justify-content: center;
+
+}
+
+.event{
+    padding: 20px;
+    width: 800px;
+    margin-top: 20px;
+    border: 2px solid black;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    transition: box-shadow 0.3s; /* Анимация при изменении тени */
+
+
+}
+
+.event h2{
+    font-family: 'MisterBrush', sans-serif;
+}
+
+.event p{
+    font-family: 'Parabola', sans-serif;
+}
+.btn{
+    justify-self: end;
+
+}
+
+.event:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Добавляем тень */
+    background-color: #f7f7f7; /* Изменяем цвет фона */
+}

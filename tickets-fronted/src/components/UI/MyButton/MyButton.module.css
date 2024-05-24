@@ -1,0 +1,20 @@
+.custom_button {
+    border: 1px solid #ccc;
+    background-color: #fff; /* Белый цвет кнопки по умолчанию */
+    color: black; /* убираем границу кнопки */
+    border-radius: 10px; /* радиус скругления углов */
+    padding: 10px 20px; /* внутренние отступы кнопки */
+    cursor: pointer; /* курсор при наведении */
+    font-size: 16px; /* размер шрифта */
+    outline: none; /* убираем обводку при фокусе */
+}
+
+.custom-button:hover {
+    background-color: #999; /* изменение цвета при наведении */
+}
+
+.selected {
+    background-color: #999; /* Цвет фона для выбранной кнопки */
+    font-weight: bold; /* Увеличение шрифта для выбранной кнопки */
+    /* Другие стили по вашему желанию */
+}

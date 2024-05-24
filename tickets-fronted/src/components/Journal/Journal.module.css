@@ -1,0 +1,58 @@
+.entry_exit_log {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.entry_exit_log h2 {
+    text-align: center;
+    color: #333;
+}
+
+.entry_exit_log form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.entry_exit_log label {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.entry_exit_log input,
+.entry_exit_log select {
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    width: 100%;
+    max-width: 300px; /* Maximum width for inputs */
+}
+
+.select_container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.entry_exit_log table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.entry_exit_log th,
+.entry_exit_log td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.entry_exit_log th {
+    background-color: #f2f2f2;
+}
+
+.entry_exit_log tr:nth-child(even) {
+    background-color: #f9f9f9;
+}

@@ -1,0 +1,35 @@
+.ticket {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 30px;
+    margin-bottom: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 0.2fr;
+}
+
+.ticket_info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 22px;
+    align-items: center;
+}
+
+.ticket_controls {
+    display: flex;
+    align-items: center;
+}
+
+.ticket_controls button {
+    margin: 0 5px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 3px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+.ticket_count {
+    margin: 0 5px;
+    font-weight: bold;
+}

@@ -1,0 +1,35 @@
+.text p{
+    font-size: 20px;
+}
+
+.desc {
+    margin: 50px;
+    text-align: center;
+}
+
+.clips {
+    display: grid;
+    grid-template-columns: 1fr; /* Один столбец */
+    grid-template-rows: repeat(2, 1fr); /* Два ряда */
+    gap: 20px; /* Расстояние между элементами */
+}
+
+.clips > div:nth-child(1),
+.clips > div:nth-child(2) {
+    grid-row: 1; /* Первый ряд */
+}
+
+.clips > div:nth-child(3),
+.clips > div:nth-child(4) {
+    grid-row: 2; /* Второй ряд */
+}
+
+.iframe_wrapper {
+    height: 280px;
+    overflow: hidden;
+}
+
+.iframe_wrapper iframe {
+    height: 400px;
+    margin-top: -60px;
+}

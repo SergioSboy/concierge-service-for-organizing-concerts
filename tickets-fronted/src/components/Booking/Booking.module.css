@@ -1,0 +1,23 @@
+.rim{
+    border: 1px solid black;
+    padding: 30px;
+}
+
+.booking p{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.btn button{
+
+    display: flex;
+    margin-left: auto;
+    margin-bottom: 50px;
+}
+.btn a {
+    text-decoration: none; /* Убираем подчеркивание */
+}
+
+.btn a:hover {
+    text-decoration: none; /* Убираем подчеркивание при наведении */
+    color: inherit; /* Наследуем цвет текста */
+}

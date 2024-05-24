@@ -1,0 +1,7 @@
+.product_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 0.5fr)); /* Создаем гибкую сетку изображений */
+    gap: 10px; /* Расстояние между карточками */
+    margin-bottom: 100px;
+}
+

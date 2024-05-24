@@ -1,0 +1,37 @@
+.slide {
+    width: 100%; /* Ширина слайда */
+    height: 600px; /* Высота слайда */
+}
+
+.slide img {
+    width: 100%; /* Ширина изображения */
+    height: 100%; /* Высота изображения */
+    object-fit: cover; /* Способ масштабирования изображения */
+}
+
+.arrow {
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px; /* Размер кружка */
+    height: 40px; /* Размер кружка */
+    border-radius: 50%; /* Делаем кружок */
+    background-color: #ccc; /* Цвет кружка */
+    border: none; /* Убираем границу */
+    font-size: 20px; /* Размер шрифта */
+    color: black; /* Цвет значка */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.next {
+    right: 20px; /* Позиционируем кнопку "Next" справа */
+}
+
+.prev {
+    left: 20px; /* Позиционируем кнопку "Previous" слева */
+}

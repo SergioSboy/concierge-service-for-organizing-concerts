@@ -1,0 +1,24 @@
+.buttons_grid{
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    grid-gap: 20px;
+}
+.horizontal_line {
+    margin-top: 30px;
+    width: 100%; /* Ширина полоски */
+    background-color: #000; /* Цвет полоски */
+
+}
+
+.custom_button{
+    background-color: #f0f0f0; /* Цвет фона для выбранной кнопки */
+    font-weight: bold; /* Увеличение шрифта для выбранной кнопки */
+    /* Другие стили по вашему желанию */
+}
+
+.selected {
+    background-color: #c5c5c5; /* Цвет фона для выбранной кнопки */
+    font-weight: bold; /* Увеличение шрифта для выбранной кнопки */
+    /* Другие стили по вашему желанию */
+}

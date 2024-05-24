@@ -1,0 +1,9 @@
+.timer{
+    text-align: center;
+
+    font-weight: bold;
+}
+
+.timer p{
+    font-size: 34px;
+}
