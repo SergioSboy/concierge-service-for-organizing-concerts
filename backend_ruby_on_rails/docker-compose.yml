@@ -1,0 +1,110 @@
+version: '3'
+services:
+  booking_server:
+    build: ./booking_server
+    command: rails s -b 0.0.0.0
+    volumes:
+      - ./booking_server:/usr/src
+    ports:
+      - 3010:3000
+    depends_on:
+      - booking_db
+      - booking_redis
+    environment:
+      REDIS_URL: redis://booking_redis:6379/0
+  
+  sidekiq:
+    build: ./booking_server
+    depends_on:
+      - booking_db
+      - booking_redis
+    command: sidekiq
+    environment:
+      REDIS_URL: redis://booking_redis:6379/0
+
+      
+  ticket_server:
+    build: ./ticket_server
+    command: rails s -b 0.0.0.0
+    volumes:
+      - ./ticket_server:/usr/src
+    ports:
+      - 3001:3000  # Порт 3001 для второго приложения
+    depends_on:
+      - ticket_db
+  
+  booking_db:
+    image: postgres:11.5
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+    volumes:
+      - booking_postgres:/var/lib/postgresql/data
+
+  ticket_db:
+    image: postgres:11.5
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+    volumes:
+      - ticket_postgres:/var/lib/postgresql/data
+
+  booking_redis:
+    image: redis:alpine
+    volumes:
+      - booking_redis:/data
+  
+  user_server:
+    build: user_extend_service
+    command: rails s -b 0.0.0.0
+    volumes:
+      - ./user_extend_service:/usr/src
+    ports:
+      - 3003:3000
+    depends_on:
+      - users_db
+  users_db:
+    image: postgres:11.5
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+    volumes:
+      - user_postgres:/var/lib/postgresql/data
+  purchase_server:
+    build: purchase_extend_service/
+    volumes:
+      - ./purchase_extend_service:/usr/src
+    ports:
+      - "3002:3000"
+    environment:
+      - USER_FIND_SERVICE_LINK=http://user_server:3000/find?
+      - USER_SERVICE_LINK=http://user_server:3000/users?
+      - BOOKING_SERVICE_LINK=http://booking_server:3000/booking/show?
+      - SIDEKIQ_SERVICE_LINK=http://booking_server:3000/booking/cancel?
+      - TICKET_STATUS_SERVICE_LINK=http://ticket_server:3000/tickets/status?
+    command: ruby sinatra_purchase.rb
+  
+  gate_server: 
+    build: gate_server
+    command: rails s -b 0.0.0.0 
+    volumes:
+      - ./gate_server:/usr/src
+    ports:
+      - "3006:3000"
+    depends_on:
+      - gate_db
+  gate_db:
+    image: postgres:11.5
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password 
+    volumes:
+      - gate_postgres:/var/lib/postgresql/data
+
+volumes:
+  booking_postgres:
+  ticket_postgres:
+  booking_redis:
+  user_postgres:
+  gate_postgres:
+  
